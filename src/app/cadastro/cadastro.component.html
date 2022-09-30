@@ -1,15 +1,18 @@
 <div id="body">
     <div class="login">
-      <p id="text">LOGIN</p>
+      <p id="text">Cadastro</p>
       <div class="campos">
         <label></label>
         <input class="input" type="text" placeholder="Nome" [(ngModel)]="nominho" required>
         <label></label>
         <input class="input" type="password" placeholder="Senha" [(ngModel)]="senha" required>
-        <input type="button" id="botao" value="Login" (click)="logar()">
+        <input type="button" id="botao" value="Cadastrar" (click)="insert()">
+        <input type="button" id="botao" value="Buscar" (click)="list()">
+        <input type="button" id="botao" value="Deletar" (click)="delete()">
+
       </div>
       <div *ngFor="let person of obj">
-        <h4>Nome: {{person.nome}} </h4> 
+        <h4>Nome: {{person.name}}</h4> 
          <h4>Senha: {{person.senha}}</h4>
          <h4>___________________</h4>
      </div>
